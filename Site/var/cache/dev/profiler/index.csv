@@ -1,1 +1,5 @@
 5a0968,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/,1495833699,,200
+323c80,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/,1495835070,,200
+070f71,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/,1495835092,,200
+79e5bb,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835145,38901f,200
+38901f,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835145,,500
