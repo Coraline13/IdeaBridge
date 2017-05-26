@@ -28,16 +28,52 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      */
-    private $username;
+    private $nume;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $prenume;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $telefon;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $oras;
+
+    /**
+     * @ORM\Column(type="integer")
+     * @Assert\NotBlank()
+     */
+    private $reputatie;
+
+    /**
+     * @ORM\Column(type="string", length=65535)
+     */
+    private $following;
+
+    /**
+     * @ORM\Column(type="string", length=65535)
+     */
+    private $credentials;
 
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
+
+
 
     /**
      * The below length depends on the "algorithm" you use for encoding
@@ -203,5 +239,173 @@ class User implements UserInterface, \Serializable
     public function getIsActive()
     {
         return $this->isActive;
+    }
+
+    /**
+     * Set nume
+     *
+     * @param string $nume
+     *
+     * @return User
+     */
+    public function setNume($nume)
+    {
+        $this->nume = $nume;
+
+        return $this;
+    }
+
+    /**
+     * Get nume
+     *
+     * @return string
+     */
+    public function getNume()
+    {
+        return $this->nume;
+    }
+
+    /**
+     * Set prenume
+     *
+     * @param string $prenume
+     *
+     * @return User
+     */
+    public function setPrenume($prenume)
+    {
+        $this->prenume = $prenume;
+
+        return $this;
+    }
+
+    /**
+     * Get prenume
+     *
+     * @return string
+     */
+    public function getPrenume()
+    {
+        return $this->prenume;
+    }
+
+    /**
+     * Set telefon
+     *
+     * @param string $telefon
+     *
+     * @return User
+     */
+    public function setTelefon($telefon)
+    {
+        $this->telefon = $telefon;
+
+        return $this;
+    }
+
+    /**
+     * Get telefon
+     *
+     * @return string
+     */
+    public function getTelefon()
+    {
+        return $this->telefon;
+    }
+
+    /**
+     * Set oras
+     *
+     * @param string $oras
+     *
+     * @return User
+     */
+    public function setOras($oras)
+    {
+        $this->oras = $oras;
+
+        return $this;
+    }
+
+    /**
+     * Get oras
+     *
+     * @return string
+     */
+    public function getOras()
+    {
+        return $this->oras;
+    }
+
+    /**
+     * Set reputatie
+     *
+     * @param integer $reputatie
+     *
+     * @return User
+     */
+    public function setReputatie($reputatie)
+    {
+        $this->reputatie = $reputatie;
+
+        return $this;
+    }
+
+    /**
+     * Get reputatie
+     *
+     * @return integer
+     */
+    public function getReputatie()
+    {
+        return $this->reputatie;
+    }
+
+    /**
+     * Set following
+     *
+     * @param string $following
+     *
+     * @return User
+     */
+    public function setFollowing($following)
+    {
+        $this->following = $following;
+
+        return $this;
+    }
+
+    /**
+     * Get following
+     *
+     * @return string
+     */
+    public function getFollowing()
+    {
+        return $this->following;
+    }
+
+    /**
+     * Set credentials
+     *
+     * @param string $credentials
+     *
+     * @return User
+     */
+    public function setCredentials($credentials)
+    {
+        $this->credentials = $credentials;
+
+        return $this;
+    }
+
+    /**
+     * Get credentials
+     *
+     * @return string
+     */
+    public function getCredentials()
+    {
+        return $this->credentials;
     }
 }
