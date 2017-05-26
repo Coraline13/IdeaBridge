@@ -5,6 +5,14 @@ body {
     color: #666;
 }
 
+/* Ideas */
+.idea{
+    border: solid 1px #ccc;
+    margin-bottom: 5px;
+    background: #f0efef;
+    padding-left: 10px;
+}
+
 /* STRUCTURE */
 
 #pagewrap {
@@ -52,7 +60,6 @@ MEDIA QUERIES
     #sidebar {
         clear: both;
         padding: 1% 4%;
-        margin-bottom: 100px;
         width: auto;
         float: right;
     }
@@ -71,6 +78,12 @@ MEDIA QUERIES
     }
 
 
+
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+
 }
 
 /* for 480px or less */
@@ -82,14 +95,14 @@ MEDIA QUERIES
     h1 {
         font-size: 2em;
     }
-
+    #sidebar {
+        display: none;
+    }
 
 }
 
 
-#content {
-    background: #f8f8f8;
-}
+
 #sidebar {
     background: #f0efef;
 }
@@ -97,6 +110,6 @@ header, #content, #middle, #sidebar {
     margin-bottom: 5px;
 }
 
-#pagewrap, header, #content, #middle, #sidebar, footer {
+#pagewrap, header, #middle, #sidebar, footer {
     border: solid 1px #ccc;
 }
