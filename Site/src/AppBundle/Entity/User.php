@@ -59,6 +59,16 @@ class User implements UserInterface, \Serializable
         // $this->salt = md5(uniqid(null, true));
     }
 
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
+    }
+
     public function getUsername()
     {
         return $this->username;

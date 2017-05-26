@@ -3,3 +3,8 @@
 070f71,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/,1495835092,,200
 79e5bb,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835145,38901f,200
 38901f,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835145,,500
+1a314d,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835436,,200
+ee6187,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835451,81862f,200
+81862f,::1,POST,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835451,,500
+060c1d,::1,POST,http://localhost/IdeaBridge/Site/web/app_dev.php/register,1495835499,,200
+f1d465,::1,GET,http://localhost/IdeaBridge/Site/web/app_dev.php/,1495835512,,200
