@@ -1,6 +1,10 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/security.html
 security:
+    role_hierarchy:
+      RULE_USER: ROLE_UNFILLED_USER   # <-- This is the crucial part
+      ROLE_ADMIN: ROLE_USER
+
     encoders:
         AppBundle\Entity\User:
             algorithm: bcrypt
