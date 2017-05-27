@@ -25,7 +25,7 @@ header {
     padding: 0 15px;
 }
 #content {
-    width: 66%;
+    width: 100%;
     float: left;
     padding: 5px 15px;
 }
@@ -52,7 +52,6 @@ MEDIA QUERIES
         width: 94%;
     }
     #content {
-        width: 91.5%;
         padding: 1% 4%;
         float: left;
     }
@@ -73,11 +72,8 @@ MEDIA QUERIES
 @media screen and (max-width: 600px) {
 
     #content {
-        width: auto;
         float: none;
     }
-
-
 
     #sidebar {
         width: auto;

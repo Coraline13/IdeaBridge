@@ -19,18 +19,25 @@
     height: 120px;
 }
 .col h2{
+    margin: 0px;
     font-size: medium;
     padding-left: 10px;
     float: left;
 }
 
 .col p{
+    padding-top: 25px;
     padding-left: 10px;
+    height:60px;
+    width: auto;
+    border-bottom: 5px solid red;
+    margin:0px;
 }
 
 .col .status{
     background: #FFCC00;
     display:inline-block;
+    float:right;
 }
 
 .col:first-child { margin-left: 0; }
