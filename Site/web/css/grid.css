@@ -34,8 +34,20 @@
     margin:0px;
 }
 
+.col img{
+    width: 25px;
+    margin: 2px;
+    display: inline-block;
+    float:left;
+}
+.col .score{
+    vertical-align: middle;
+    padding-top: 2px;
+}
+
 .col .status{
-    background: #FFCC00;
+    background: #fd2800;
+    color: ;
     display:inline-block;
     float:right;
 }
