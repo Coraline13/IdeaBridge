@@ -56,4 +56,10 @@ class PostController extends Controller
         ));
     }
 
+    /**
+     * @Route("/post_make")
+     */
+    public function postAction(){
+        return $this->render('Post/create.html.twig'));
+    }
 }
