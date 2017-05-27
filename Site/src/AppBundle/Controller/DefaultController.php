@@ -2,9 +2,12 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Document;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DefaultController extends Controller
 {
@@ -24,6 +27,34 @@ class DefaultController extends Controller
             'item' => $this->returnData(1),
             'post' => $post,
         ]);
+    }
+
+    /**
+     * @Template()
+     * @Route("/", name="homepage")
+     */
+    public function uploadAction()
+    {
+        $document = new Document();
+        $form = $this->createFormBuilder($document)
+            ->add('name')
+            ->add('file')
+            ->getForm()
+        ;
+
+        if ($this->getRequest()->isMethod('POST')) {
+            $form->bind($this->getRequest());
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+
+                $em->persist($document);
+                $em->flush();
+
+                return $this->redirectToRoute('homepage');
+            }
+        }
+
+        return array('form' => $form->createView());
     }
 
     private function returnData($postId){

@@ -41,7 +41,6 @@ class PostController extends Controller
      */
     public function returnDataAction($postId){
 
-
         $post = $this->getDoctrine()
             ->getRepository('AppBundle:Post')
             ->find($postId);
@@ -54,6 +53,19 @@ class PostController extends Controller
 
         return $this->render('Post/base.html.twig', array(
             'post' => $post,
+        ));
+    }
+
+    /**
+     * @Route("/post_data_all")
+     */
+    public function returnDataAllAction(){
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Post');
+
+        $posts = $repository->findAll();
+
+        return $this->render('Post/grid.html.twig', array(
+            'posts' =>  $posts,
         ));
     }
 

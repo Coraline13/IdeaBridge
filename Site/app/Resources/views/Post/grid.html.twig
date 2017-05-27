@@ -1,0 +1,18 @@
+{% for post in posts %}
+    {% if loop.index0 % 3 == 0 %}
+        <div class="section group">
+    {% endif %}
+    <div class="col box1 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});">
+        <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+        <p> {{ post.descriere }}</p>
+
+        <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: {{ post.followers }}</span></div>
+    </div>
+    {% if loop.index % 3 == 0 %}
+        </div>
+    {% else %}
+        {% if loop.last == true %}
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}

@@ -21,7 +21,7 @@
 
         <header id="topmenu">
             <nav id='cssmenu'>
-                <div class="logo"><img width="110px" src="{{ asset('images/Logo.png') }}"/></div>
+                <div class="logo"><a href="{{ path('homepage') }}"><img width="110px" src="{{ asset('images/Logo.png') }}"/></a></div>
                 <div id="head-mobile"></div>
                 <div class="button"></div>
                 <ul>
@@ -63,10 +63,10 @@
             {% block body %}{% endblock %}
         </div>
 
-        <footer>
+        <!--<footer>
             <h4>Footer</h4>
             <p>Footer text</p>
-        </footer>
+        </footer>-->
 
         {% block javascripts %}{% endblock %}
     </body>
