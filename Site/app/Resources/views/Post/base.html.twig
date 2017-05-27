@@ -1,21 +1,22 @@
 {# app/Resources/views/Post/base.html.twig #}
 
 <div class="section group">
+
+    <div class="col span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});">
+        <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+
+        <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+    </div>
     <div class="col span_1_of_3">
         <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
 
         <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
     </div>
-    <div class="col span_2_of_3">
+    <div class="col span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/test.jpg') }});">
         <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-        <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
-    </div>
-    <div class="col span_3_of_3">
-        <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
 
         <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
     </div>

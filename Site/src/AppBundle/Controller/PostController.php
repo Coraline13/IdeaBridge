@@ -38,7 +38,7 @@ class PostController extends Controller
     /**
      * @Route("/post_data/{postId}")
      */
-    public function returnData($postId){
+    public function returnDataAction($postId){
 
 
         $post = $this->getDoctrine()

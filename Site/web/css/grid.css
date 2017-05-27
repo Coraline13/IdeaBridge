@@ -1,7 +1,7 @@
 /*  SECTIONS  */
 .section {
     clear: both;
-    padding: 0px;
+    padding: 0px 0px 0px 20px;
     margin: 0px;
 }
 
@@ -11,7 +11,7 @@
 .col {
     display: block;
     float:left;
-    margin: 1% 0 1% 1%;
+    margin: 1% 0 0.5% 1%;
 
     color:white;
 
@@ -19,9 +19,11 @@
     background: #f0efef;
 
     background: linear-gradient(
-            rgba(20,20,20, .5),
-            rgba(20,20,20, .5)),
-    url('../images/groapa.jpg');
+            rgba(242,242,242, .5),
+            rgba(242,242,242, .5)),
+    url('../images/tileable.png');
+
+    background-repeat: repeat;
 
     height: 150px;
 }
@@ -89,6 +91,7 @@
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
-    .col {  margin: 1% 0 1% 0%; }
+    .col {  margin: 1% 0 1% 0%; padding: 0px; }
+    .section { padding: 0px; }
     .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 }

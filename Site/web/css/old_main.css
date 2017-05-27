@@ -3,7 +3,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #666;
-    background: #eee;
 }
 
 /* Ideas */
@@ -15,21 +14,28 @@ body {
 }
 
 /* STRUCTURE */
+
+
+header {
+    height: 100px;
+    padding: 0 15px;
+}
 #content {
     width: 100%;
     float: left;
     padding: 5px 15px;
 }
 
+
+
+#sidebar {
+    width: 28%;
+    padding: 5px 15px;
+    float: right;
+}
 footer {
     clear: both;
     padding: 0 15px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow:hidden;
 }
 
 /************************************************************************************
@@ -38,11 +44,22 @@ MEDIA QUERIES
 /* for 980px or less */
 @media screen and (max-width: 980px) {
 
+    #pagewrap {
+        width: 94%;
+    }
     #content {
         padding: 1% 4%;
         float: left;
     }
-    footer {
+
+    #sidebar {
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: right;
+    }
+
+    header, footer {
         padding: 1% 4%;
     }
 }
@@ -51,6 +68,11 @@ MEDIA QUERIES
 @media screen and (max-width: 600px) {
 
     #content {
+        float: none;
+    }
+
+    #sidebar {
+        width: auto;
         float: none;
     }
 
@@ -65,14 +87,21 @@ MEDIA QUERIES
     h1 {
         font-size: 2em;
     }
+    #sidebar {
+        display: none;
+    }
 
 }
 
 
-#content{
+
+#sidebar {
+    background: #f0efef;
+}
+header, #content, #middle, #sidebar {
     margin-bottom: 5px;
 }
 
-footer {
+#pagewrap, header, #middle, #sidebar, footer {
     border: solid 1px #ccc;
 }

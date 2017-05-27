@@ -2,18 +2,15 @@
 
 {% block body %}
 <div id="pagewrap">
-    <div id="logo">
-        <img src="{{ asset('images/Logo.png') }}"/>
-    </div>
     <header>
         <nav id='cssmenu'>
-            <div class="logo"><a href="index.html">Responsive </a></div>
+            <div class="logo"><img width="110px" src="{{ asset('images/Logo.png') }}"/></div>
             <div id="head-mobile"></div>
             <div class="button"></div>
             <ul>
-                <li class='active'><a href='#'>HOME</a></li>
-                <li><a href='#'>ABOUT</a></li>
-                <li><a href='#'>PRODUCTS</a>
+                <li><a href='#'>About</a></li>
+                <li><a href='#'>BlaBla</a></li>
+                <li><a href='#'>Ceva</a>
                     <ul>
                         <li><a href='#'>Product 1</a>
                             <ul>
@@ -29,21 +26,59 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href='#'>BIO</a></li>
-                <li><a href='#'>VIDEO</a></li>
-                <li><a href='#'>GALLERY</a></li>
-                <li><a href='#'>CONTACT</a></li>
+                <li><a href='#'>Contact</a></li>
+                {% if app.user %}
+                    <li class="username"><a href='#'>{{ user.username }}</a>
+                        <ul>
+                            <li><a href='{{ path('logout') }}'>Logout</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="username"><a href='{{ path('login') }}'>Login</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
-    <section id="main">
-        {{ item }}
-    </section>
-    {% if user %}
-        <li>{{ user.username }}</li>
-    {% else %}
-        <li>No users found</li>
-    {% endif %}
+
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+
+    <!--<div class="section group">
+
+        <div class="col span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});">
+            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+
+            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+        </div>
+        <div class="col span_1_of_3">
+            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+
+            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+        </div>
+        <div class="col span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/test.jpg') }});">
+            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+
+            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+        </div>
+    </div>
+    <div class="section group">
+        <div class="col span_1_of_3">
+            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+
+            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+        </div>
+        <div class="col span_1_of_3">
+            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+
+            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+        </div>
+    </div>
     <!--       <footer>
             <h4>Footer</h4>
             <p>Footer text</p>
