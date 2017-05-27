@@ -57,9 +57,38 @@ class PostController extends Controller
     }
 
     /**
-     * @Route("/post_make")
+     * @Route("/make_post")
      */
-    public function postAction(){
-        return $this->render('Post/create.html.twig'));
+    public function makeAction()
+    {
+        return $this->render('Post/make.html.twig');
     }
+
+    /**
+     * @Route("/get_post")
+     */
+    public function getDataAction()
+    {
+        $post = new Post();
+
+
+        $post->setNume($this->get('request')->request->get('nume'));
+        $post->setCategorie('Renovare');
+        $post->setPropunator('23456');
+        $post->setDescriere('Ergonomic and stylish!');
+        $post->setLocatie('Pe strada');
+        $post->setStatus('pending');
+        $post->setScor('100');
+
+        $em = $this->getDoctrine()->getManager();
+
+        // tells Doctrine you want to (eventually) save the Product (no queries yet)
+        $em->persist($post);
+
+        // actually executes the queries (i.e. the INSERT query)
+        $em->flush();
+
+        return $this->render('default/index.html.twig');
+    }
+
 }
