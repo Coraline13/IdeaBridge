@@ -8,7 +8,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
- * @UniqueEntity(fields="email", message="Email already taken")
  * @UniqueEntity(fields="username", message="Username already taken")
  */
 class User implements UserInterface, \Serializable
@@ -25,7 +24,7 @@ class User implements UserInterface, \Serializable
      * @Assert\NotBlank()
      * @Assert\Email()
      */
-    private $email;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -52,18 +51,17 @@ class User implements UserInterface, \Serializable
     private $oras;
 
     /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank()
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $reputatie;
 
     /**
-     * @ORM\Column(type="string", length=65535)
+     * @ORM\Column(type="string", length=65535, nullable=true)
      */
     private $following;
 
     /**
-     * @ORM\Column(type="string", length=65535)
+     * @ORM\Column(type="string", length=65535, nullable=true)
      */
     private $credentials;
 
@@ -72,8 +70,6 @@ class User implements UserInterface, \Serializable
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
-
-
 
     /**
      * The below length depends on the "algorithm" you use for encoding
@@ -191,30 +187,6 @@ class User implements UserInterface, \Serializable
         $this->password = $password;
 
         return $this;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return User
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
     }
 
     /**

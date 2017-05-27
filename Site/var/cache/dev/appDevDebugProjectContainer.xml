@@ -455,7 +455,7 @@
                 <tag name="cache.pool" clearer="cache.default_clearer"/>
                 <argument>Qd0qLhtdvu</argument>
                 <argument>0</argument>
-                <argument>KW-+Vzxp7qYeAaPIY9ReE8</argument>
+                <argument>GN7sUMEPeBdcnqcpadssgn</argument>
                 <argument>C:\xampp\htdocs\IdeaBridge\Site\var\cache\dev/pools</argument>
                 <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                 <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -638,7 +638,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>ziEYrFxFOP</argument>
       <argument>0</argument>
-      <argument>KW-+Vzxp7qYeAaPIY9ReE8</argument>
+      <argument>GN7sUMEPeBdcnqcpadssgn</argument>
       <argument>C:\xampp\htdocs\IdeaBridge\Site\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -648,7 +648,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>GtnQoTJIQ3</argument>
       <argument>0</argument>
-      <argument>KW-+Vzxp7qYeAaPIY9ReE8</argument>
+      <argument>GN7sUMEPeBdcnqcpadssgn</argument>
       <argument>C:\xampp\htdocs\IdeaBridge\Site\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1652,7 +1652,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5928aaf74c81d8.24299720</argument>
+            <argument>5928b0044e6b01.67613903</argument>
           </service>
         </argument>
       </argument>
@@ -1754,7 +1754,7 @@
     <service id="security.user.provider.concrete.our_db_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false">
       <argument type="service" id="doctrine"/>
       <argument>AppBundle:User</argument>
-      <argument>email</argument>
+      <argument>username</argument>
       <argument>null</argument>
     </service>
     <service id="security.firewall.map.context.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallContext">
@@ -1908,7 +1908,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5928aaf74c81d8.24299720</argument>
+            <argument>5928b0044e6b01.67613903</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

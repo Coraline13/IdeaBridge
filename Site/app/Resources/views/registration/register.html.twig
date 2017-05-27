@@ -5,9 +5,12 @@
 
 {{ form_start(form) }}
     {{ form_row(form.username) }}
-    {{ form_row(form.email) }}
     {{ form_row(form.plainPassword.first) }}
     {{ form_row(form.plainPassword.second) }}
+    {{ form_row(form.nume) }}
+    {{ form_row(form.prenume) }}
+    {{ form_row(form.telefon) }}
+    {{ form_row(form.oras) }}
 
 <button type="submit">Register!</button>
 {{ form_end(form) }}

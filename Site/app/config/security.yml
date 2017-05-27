@@ -10,7 +10,7 @@ security:
         our_db_provider:
             entity:
                 class: AppBundle:User
-                property: email
+                property: username
         in_memory:
             memory: ~
 
