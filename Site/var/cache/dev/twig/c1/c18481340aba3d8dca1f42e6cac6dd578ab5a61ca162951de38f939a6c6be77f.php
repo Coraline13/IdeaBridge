@@ -21,29 +21,29 @@ class __TwigTemplate_a694d06dfc2713ce2ad0d33d8cb0f32ee1d79d8a1e2d37812dfc811d8ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c367d1b5d9a83d7f2114ddfff016903b60742d03eec7a4c83719c5c60ff9aef7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c367d1b5d9a83d7f2114ddfff016903b60742d03eec7a4c83719c5c60ff9aef7->enter($__internal_c367d1b5d9a83d7f2114ddfff016903b60742d03eec7a4c83719c5c60ff9aef7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_223a5a6159a21a8af3f3b6f16d689cf481f4664cb971356b20f94abd4175c17e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_223a5a6159a21a8af3f3b6f16d689cf481f4664cb971356b20f94abd4175c17e->enter($__internal_223a5a6159a21a8af3f3b6f16d689cf481f4664cb971356b20f94abd4175c17e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
-        $__internal_5af81b8c9aa4debb1882031f3ba21371b4282a9203c2c3e5347ce5e0ef496d40 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5af81b8c9aa4debb1882031f3ba21371b4282a9203c2c3e5347ce5e0ef496d40->enter($__internal_5af81b8c9aa4debb1882031f3ba21371b4282a9203c2c3e5347ce5e0ef496d40_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_3592b1451bf521e8b711fc5e5ded29d37ac61c4851d83f48227c00055a7e89a9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3592b1451bf521e8b711fc5e5ded29d37ac61c4851d83f48227c00055a7e89a9->enter($__internal_3592b1451bf521e8b711fc5e5ded29d37ac61c4851d83f48227c00055a7e89a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c367d1b5d9a83d7f2114ddfff016903b60742d03eec7a4c83719c5c60ff9aef7->leave($__internal_c367d1b5d9a83d7f2114ddfff016903b60742d03eec7a4c83719c5c60ff9aef7_prof);
+        $__internal_223a5a6159a21a8af3f3b6f16d689cf481f4664cb971356b20f94abd4175c17e->leave($__internal_223a5a6159a21a8af3f3b6f16d689cf481f4664cb971356b20f94abd4175c17e_prof);
 
         
-        $__internal_5af81b8c9aa4debb1882031f3ba21371b4282a9203c2c3e5347ce5e0ef496d40->leave($__internal_5af81b8c9aa4debb1882031f3ba21371b4282a9203c2c3e5347ce5e0ef496d40_prof);
+        $__internal_3592b1451bf521e8b711fc5e5ded29d37ac61c4851d83f48227c00055a7e89a9->leave($__internal_3592b1451bf521e8b711fc5e5ded29d37ac61c4851d83f48227c00055a7e89a9_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_36eec1558e7d6d4e40593a862b5c55f99620f94dee000b90dbe171943df3f9c2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_36eec1558e7d6d4e40593a862b5c55f99620f94dee000b90dbe171943df3f9c2->enter($__internal_36eec1558e7d6d4e40593a862b5c55f99620f94dee000b90dbe171943df3f9c2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_870f3405ab5d62984edc25d94748201ad0d40af4651efc66e3e35922411b27b4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_870f3405ab5d62984edc25d94748201ad0d40af4651efc66e3e35922411b27b4->enter($__internal_870f3405ab5d62984edc25d94748201ad0d40af4651efc66e3e35922411b27b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_c755e4755921360c409e2fb2060a197c1cde4287e54d50ee62499274b841ed5d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c755e4755921360c409e2fb2060a197c1cde4287e54d50ee62499274b841ed5d->enter($__internal_c755e4755921360c409e2fb2060a197c1cde4287e54d50ee62499274b841ed5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_dde8a5c263e3a678f2b8068f44b0e81ebf9f8e6c820346bf2a35cdcc677e835b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dde8a5c263e3a678f2b8068f44b0e81ebf9f8e6c820346bf2a35cdcc677e835b->enter($__internal_dde8a5c263e3a678f2b8068f44b0e81ebf9f8e6c820346bf2a35cdcc677e835b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "<div id=\"pagewrap\">
@@ -63,33 +63,28 @@ class __TwigTemplate_a694d06dfc2713ce2ad0d33d8cb0f32ee1d79d8a1e2d37812dfc811d8ff
         <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
     </aside>
     <section id=\"content\">
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
+        <div class=\"section group\">
+            <div class=\"col span_1_of_3\">
+                <h2>Nume idee</h2><span class=\".status\">ACCEPTAT</span>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
         </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
+        <div class=\"section group\">
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
         </div>
     </section>
     <!--       <footer>
@@ -103,10 +98,10 @@ class __TwigTemplate_a694d06dfc2713ce2ad0d33d8cb0f32ee1d79d8a1e2d37812dfc811d8ff
 </footer>
 ";
         
-        $__internal_c755e4755921360c409e2fb2060a197c1cde4287e54d50ee62499274b841ed5d->leave($__internal_c755e4755921360c409e2fb2060a197c1cde4287e54d50ee62499274b841ed5d_prof);
+        $__internal_dde8a5c263e3a678f2b8068f44b0e81ebf9f8e6c820346bf2a35cdcc677e835b->leave($__internal_dde8a5c263e3a678f2b8068f44b0e81ebf9f8e6c820346bf2a35cdcc677e835b_prof);
 
         
-        $__internal_36eec1558e7d6d4e40593a862b5c55f99620f94dee000b90dbe171943df3f9c2->leave($__internal_36eec1558e7d6d4e40593a862b5c55f99620f94dee000b90dbe171943df3f9c2_prof);
+        $__internal_870f3405ab5d62984edc25d94748201ad0d40af4651efc66e3e35922411b27b4->leave($__internal_870f3405ab5d62984edc25d94748201ad0d40af4651efc66e3e35922411b27b4_prof);
 
     }
 
@@ -152,33 +147,28 @@ class __TwigTemplate_a694d06dfc2713ce2ad0d33d8cb0f32ee1d79d8a1e2d37812dfc811d8ff
         <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
     </aside>
     <section id=\"content\">
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
+        <div class=\"section group\">
+            <div class=\"col span_1_of_3\">
+                <h2>Nume idee</h2><span class=\".status\">ACCEPTAT</span>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
         </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
-        </div>
-        <div class=\"idea\">
-            <h2>Facem si noi o groapa?</h2>
-            <p>Da, da facem</p>
+        <div class=\"section group\">
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
+            <div class=\"col span_1_of_3\">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
+            </div>
         </div>
     </section>
     <!--       <footer>
