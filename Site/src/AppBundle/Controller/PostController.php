@@ -32,6 +32,31 @@ class PostController extends Controller
         // actually executes the queries (i.e. the INSERT query)
         $em->flush();
 
-        return new Response('Saved new post with id '.$post->getId());
+        return $this->render('default/index.html.twig');
     }
+
+    /**
+     * @Route("/post_data/{postId}")
+     */
+    public function returnData($postId){
+
+
+        $post = $this->getDoctrine()
+            ->getRepository('AppBundle:Post')
+            ->find($postId);
+
+        if (!$post) {
+            throw $this->createNotFoundException(
+                'No product found for id '.$postId
+            );
+        }
+
+
+
+
+        return $this->render('Post/base.html.twig', array(
+            'post' => $post,
+        ));
+    }
+
 }
