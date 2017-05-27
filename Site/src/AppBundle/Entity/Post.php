@@ -3,6 +3,9 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
@@ -19,38 +22,41 @@ class Post
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
      */
     private $nume;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
      */
     private $categorie;
 
     /**
-     * @ORM\Column(type="decimal", scale=2)
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $propunator;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=65536)
+     * @Assert\NotBlank()
      */
     private $descriere;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $locatie;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $status;
+    private $status = 1;
 
     /**
      * @ORM\Column(type="decimal", scale=2)
      */
-    private $scor;
+    private $scor = 0;
 
     /**
      * Get id
@@ -72,7 +78,7 @@ class Post
     public function setNume($nume)
     {
         $this->nume = $nume;
-    
+
         return $this;
     }
 
@@ -96,7 +102,7 @@ class Post
     public function setCategorie($categorie)
     {
         $this->categorie = $categorie;
-    
+
         return $this;
     }
 
@@ -120,7 +126,7 @@ class Post
     public function setPropunator($propunator)
     {
         $this->propunator = $propunator;
-    
+
         return $this;
     }
 
@@ -144,7 +150,7 @@ class Post
     public function setDescriere($descriere)
     {
         $this->descriere = $descriere;
-    
+
         return $this;
     }
 
@@ -168,7 +174,7 @@ class Post
     public function setLocatie($locatie)
     {
         $this->locatie = $locatie;
-    
+
         return $this;
     }
 
@@ -192,7 +198,7 @@ class Post
     public function setStatus($status)
     {
         $this->status = $status;
-    
+
         return $this;
     }
 
@@ -216,7 +222,7 @@ class Post
     public function setScor($scor)
     {
         $this->scor = $scor;
-    
+
         return $this;
     }
 
