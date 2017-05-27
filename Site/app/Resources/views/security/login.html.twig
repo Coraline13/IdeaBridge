@@ -1,39 +1,27 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" />
+{% endblock %}
+
 {% block body %}
 
-    <div id="pagewrap">
-        <div id="logo">
-            <img src="{{ asset('images/Logo.png') }}"/>
-        </div>
-        <header>
-            <h1>2 Column Responsive Layout</h1>
-        </header>
-
-        <section id="content">
+    <div class="container">
+        <form id="contact" action="{{ path('login') }}" method="post">
+            <h3>Autentificare</h3>
             {% if error %}
-                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                <h4>{{ error.messageKey|trans(error.messageData, 'security') }}</h4>
             {% endif %}
+            <fieldset>
+                <input placeholder="Email" type="email" tabindex="1" required autofocus id="username" name="_username" type="email" value="{{ last_username }}">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Parola" type="password" tabindex="2" required id="password" name="_password" type="password" spellcheck="false">
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Se autentfica">Autentificare</button>
+            </fieldset>
+        </form>
+    </div>
 
-            <form action="{{ path('login') }}" method="post">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="_username" value="{{ last_username }}" />
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="_password" />
-
-                {#
-                    If you want to control the URL the user
-                    is redirected to on success (more details below)
-                    <input type="hidden" name="_target_path" value="/account" />
-                #}
-
-                <button type="submit">login</button>
-            </form>
-        </section>
-    </div><!-- end-of-pagewrap -->
-    <footer>
-        <h4>Footer</h4>
-        <p>Footer text</p>
-    </footer>
 {% endblock %}

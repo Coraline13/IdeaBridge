@@ -1,93 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div id="pagewrap">
-    <header>
-        <nav id='cssmenu'>
-            <div class="logo"><img width="110px" src="{{ asset('images/Logo.png') }}"/></div>
-            <div id="head-mobile"></div>
-            <div class="button"></div>
-            <ul>
-                <li><a href='#'>About</a></li>
-                <li><a href='#'>BlaBla</a></li>
-                <li><a href='#'>Ceva</a>
-                    <ul>
-                        <li><a href='#'>Product 1</a>
-                            <ul>
-                                <li><a href='#'>Sub Product</a></li>
-                                <li><a href='#'>Sub Product</a></li>
-                            </ul>
-                        </li>
-                        <li><a href='#'>Product 2</a>
-                            <ul>
-                                <li><a href='#'>Sub Product</a></li>
-                                <li><a href='#'>Sub Product</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href='#'>Contact</a></li>
-                {% if app.user %}
-                    <li class="username"><a href='#'>{{ user.username }}</a>
-                        <ul>
-                            <li><a href='{{ path('logout') }}'>Logout</a></li>
-                        </ul>
-                    </li>
-                {% else %}
-                    <li class="username"><a href='{{ path('login') }}'>Login</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </header>
-
     {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
     {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
     {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
-
-    <!--<div class="section group">
-
-        <div class="col span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});">
-            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
-        </div>
-        <div class="col span_1_of_3">
-            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
-        </div>
-        <div class="col span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/test.jpg') }});">
-            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
-        </div>
-    </div>
-    <div class="section group">
-        <div class="col span_1_of_3">
-            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
-        </div>
-        <div class="col span_1_of_3">
-            <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-            <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
-        </div>
-    </div>
-    <!--       <footer>
-            <h4>Footer</h4>
-            <p>Footer text</p>
-          </footer> -->
-</div><!-- end-of-pagewrap -->
-<footer>
-    <h4>Footer</h4>
-    <p>Footer text</p>
-</footer>
-
-
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
+    {{ render(controller('AppBundle:Post:returnData', { 'postId': 2 })) }}
 {% endblock %}

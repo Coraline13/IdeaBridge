@@ -18,7 +18,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+        <header id="topmenu">
+            <nav id='cssmenu'>
+                <div class="logo"><img width="110px" src="{{ asset('images/Logo.png') }}"/></div>
+                <div id="head-mobile"></div>
+                <div class="button"></div>
+                <ul>
+                    <li><a href='#'>About</a></li>
+                    <li><a href='#'>BlaBla</a></li>
+                    <li><a href='#'>Ceva</a>
+                        <ul>
+                            <li><a href='#'>Product 1</a>
+                                <ul>
+                                    <li><a href='#'>Sub Product</a></li>
+                                    <li><a href='#'>Sub Product</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='#'>Product 2</a>
+                                <ul>
+                                    <li><a href='#'>Sub Product</a></li>
+                                    <li><a href='#'>Sub Product</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href='#'>Contact</a></li>
+                    {% if app.user %}
+                        <li class="username"><a href='#'>{{ user.username }}</a>
+                            <ul>
+                                <li><a href='{{ path('logout') }}'>Logout</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="username"><a href='{{ path('login') }}'>Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+
+        <div id="">
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer>
+            <h4>Footer</h4>
+            <p>Footer text</p>
+        </footer>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
