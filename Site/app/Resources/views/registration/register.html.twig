@@ -1,18 +1,23 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" />
+{% endblock %}
+
 {% block body %}
 
-
-{{ form_start(form) }}
-    {{ form_row(form.username) }}
-    {{ form_row(form.plainPassword.first) }}
-    {{ form_row(form.plainPassword.second) }}
+    {% form_theme form 'forms/fields.html.twig' %}
+    <div class="container">
+{{ form_start(form, { 'attr': {'id': 'contact'} }) }}
+    {{ form_row(form.username, {'label': 'Email'})  }}
+    {{ form_row(form.plainPassword.first, { 'label': 'Parola' }) }}
+    {{ form_row(form.plainPassword.second, { 'label': 'Repeta Parola' }) }}
     {{ form_row(form.nume) }}
     {{ form_row(form.prenume) }}
     {{ form_row(form.telefon) }}
     {{ form_row(form.oras) }}
 
-<button type="submit">Register!</button>
+<button type="submit">Inregistreaza-te!</button>
 {{ form_end(form) }}
-
+    </div>
 {% endblock %}
