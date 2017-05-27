@@ -1,11 +1,11 @@
 {# app/Resources/views/Post/base.html.twig #}
 
 <div class="section group">
-    <div class="col box1 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});">
-        <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
+    <div class="col box1 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/2.png') }});">
+        <h2 class="title">{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
 
-        <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
+        <div class="bottom"><span class="scor number">{{ post.scor }}<br>SCOR</span><span class="follow number">NaN</span></div>
     </div>
     <div class="col box2 span_1_of_3">
         <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
@@ -13,10 +13,12 @@
 
         <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
     </div>
-    <div class="col box3 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/test.jpg') }});">
+    <div class="col box3 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/7.png') }});">
         <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
 
         <div class="bottom"><span class="scor">Scor: {{ post.scor }}</span><span class="follow">Urmarit de: NaN</span></div>
     </div>
+	<div class="scroll-top-link" onclick="$('html,body').scrollTop(0);">^</div>
+	
 </div>

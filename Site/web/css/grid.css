@@ -3,6 +3,7 @@
     clear: both;
     padding: 0px 0px 0px 20px;
     margin: 0px;
+	background: #fff;
 }
 
 /*  COLUMN SETUP  */
@@ -11,7 +12,7 @@
 .col {
     display: block;
     float:left;
-    margin: 1% 0 0.5% 1%;
+    margin: 3% 1% 1% 1%;
 
     color:white;
 
@@ -73,13 +74,23 @@
     color: #fd2800;
 }
 
+.number {
+	color: #fd2800;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.title {
+	margin-left: 10px;
+}
+
 .col .follow .follow_text{
     color: #fd2800;
 }
 
 .col p{
     padding: 55px 10px 0px 25px;
-    height:65px;
+    height:100px;
     width: auto;
 
     margin:0px;
@@ -90,7 +101,7 @@
     padding: 2px 10px 0px 10px;
     margin: 0px;
 
-    height: 30px;
+    height: 60px;
 }
 
 .col .follow{
@@ -111,6 +122,30 @@
     float:right;
 }
 
+.scroll-top-link {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    background: #fd2800;
+	font-weight: 900;
+	color: #010b13;
+    right: 30px;
+    bottom: 50px;
+    z-index: 1030;
+	cursor: pointer;
+	animation-name: fadeInUp;
+	animation-duration: 2s;
+}
+
+.scroll-top-link:hover {
+	background: #010b13;
+	color: #fff;
+	transition:transform 0.3s ease;
+}
+
 .col:first-child { margin-left: 0; }
 
 /*  GROUPING  */
@@ -122,11 +157,11 @@
 /*  GRID OF THREE  */
 .span_3_of_3 { width: 100%; }
 .span_2_of_3 { width: 66.13%; }
-.span_1_of_3 { width: 32.26%; }
+.span_1_of_3 { width: 28%; }
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 980px) {
-    .col {  margin: 1% 0 1% 0%; padding: 0px; }
+    .col { margin: 1% 1% 70px 0%; padding: 0px; }
     .section { padding: 0px; }
     .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 }

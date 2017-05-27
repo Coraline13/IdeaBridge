@@ -31,9 +31,9 @@ class DefaultController extends Controller
 
     /**
      * @Template()
-     * @Route("/", name="homepage")
+     * @Route("/upload", name="upload")
      */
-    public function uploadAction()
+    public function uploadAction(Request $request)
     {
         $document = new Document();
         $form = $this->createFormBuilder($document)
