@@ -9,8 +9,8 @@
     </style>
 
     <style name="IdeaBridgeTheme" parent="AppTheme" >
-        <item name="colorPrimary">@color/IdeaRed</item>
-        <item name="colorPrimaryDark">@android:color/holo_red_dark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
         <item name="colorAccent">@android:color/darker_gray</item>
     </style>
 
