@@ -27,18 +27,19 @@
                 <ul>
                     <li><a href='#'>About</a></li>
                     <li><a href='#'>BlaBla</a></li>
-                    <li><a href='#'>Ceva</a>
+                    <li><a href='#'>Filtre</a>
                         <ul>
-                            <li><a href='#'>Product 1</a>
+                            <li><a href='#'>Categorie</a>
                                 <ul>
-                                    <li><a href='#'>Sub Product</a></li>
-                                    <li><a href='#'>Sub Product</a></li>
+                                    <li><a href='#'>Evenimente</a></li>
+                                    <li><a href='#'>Reparatii / Curatenie</a></li>
+                                    <li><a href='#'>Idei</a></li>
                                 </ul>
                             </li>
-                            <li><a href='#'>Product 2</a>
+                            <li><a href='#'>Complexitate</a>
                                 <ul>
-                                    <li><a href='#'>Sub Product</a></li>
-                                    <li><a href='#'>Sub Product</a></li>
+                                    <li><a href='#'>5 stele</a></li>
+                                    <li><a href='#'>4 stele</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -52,12 +53,15 @@
                         </li>
                     {% else %}
                         <li class="username"><a href='{{ path('login') }}'>Login</a></li>
+                        <li><a href='{{ path('user_registration') }}'>Register</a></li>
                     {% endif %}
                 </ul>
             </nav>
         </header>
 
-        {% block body %}{% endblock %}
+        <div id="">
+            {% block body %}{% endblock %}
+        </div>
 
         <footer>
             <h4>Footer</h4>

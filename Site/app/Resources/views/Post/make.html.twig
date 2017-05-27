@@ -1,0 +1,23 @@
+{# app/Resources/views/Post/make.html.twig #}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}" />
+{% endblock %}
+
+<div class="container" style = "width : 600px">
+    <form id="contact" action="/get_post.php" method="post">
+        <h3>Postare noua</h3>
+        <fieldset>
+            <input placeholder="Titlu propunere" name = "nume" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Categorie" name = "categorie" type="text" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="Descriere" name = "descriere" tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+            <button name="Submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+    </form>
+</div>
