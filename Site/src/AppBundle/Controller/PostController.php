@@ -51,9 +51,6 @@ class PostController extends Controller
             );
         }
 
-
-
-
         return $this->render('Post/base.html.twig', array(
             'post' => $post,
         ));

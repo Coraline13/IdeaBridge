@@ -6,37 +6,44 @@
         <img src="{{ asset('images/Logo.png') }}"/>
     </div>
     <header>
-        <h1>2 Column Responsive Layout</h1>
+        <nav id='cssmenu'>
+            <div class="logo"><a href="index.html">Responsive </a></div>
+            <div id="head-mobile"></div>
+            <div class="button"></div>
+            <ul>
+                <li class='active'><a href='#'>HOME</a></li>
+                <li><a href='#'>ABOUT</a></li>
+                <li><a href='#'>PRODUCTS</a>
+                    <ul>
+                        <li><a href='#'>Product 1</a>
+                            <ul>
+                                <li><a href='#'>Sub Product</a></li>
+                                <li><a href='#'>Sub Product</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#'>Product 2</a>
+                            <ul>
+                                <li><a href='#'>Sub Product</a></li>
+                                <li><a href='#'>Sub Product</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href='#'>BIO</a></li>
+                <li><a href='#'>VIDEO</a></li>
+                <li><a href='#'>GALLERY</a></li>
+                <li><a href='#'>CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
     <section id="main">
-        <div class="section group">
-            <div class="col span_1_of_3">
-                <h2>Nume idee</h2><span class="status">ACCEPTAT</span>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-
-                <div class="bottom"><span class="scor">Scor: <span class="scor_text">112</span></span><span class="follow">Urmarit de: <span class="follow_text">69</span></span></div>
-            </div>
-            <div class="col span_1_of_3">
-                <h2>Nume idee</h2><span class="status">ACCEPTAT</span>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-            </div>
-            <div class="col span_1_of_3">
-                <h2>Nume idee</h2><span class="status">ACCEPTAT</span>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus.</p>
-            </div>
-        </div>
-        <div class="section group">
-            <div class="col span_1_of_3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
-            </div>
-            <div class="col span_1_of_3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
-            </div>
-            <div class="col span_1_of_3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id porttitor metus. Praesent ligula orci, tincidunt in ex porttitor, maximus lacinia
-            </div>
-        </div>
+        {{ item }}
     </section>
+    {% if user %}
+        <li>{{ user.username }}</li>
+    {% else %}
+        <li>No users found</li>
+    {% endif %}
     <!--       <footer>
             <h4>Footer</h4>
             <p>Footer text</p>
@@ -46,4 +53,6 @@
     <h4>Footer</h4>
     <p>Footer text</p>
 </footer>
+
+
 {% endblock %}
