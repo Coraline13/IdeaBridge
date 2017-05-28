@@ -21,12 +21,11 @@
 
         <header id="topmenu">
             <nav id='cssmenu'>
-                <div class="logo"><img src="{{ asset('images/Logo.png') }}"/></div>
+                <div class="logo"><a href="{{ path('homepage') }}"><img src="{{ asset('images/Logo.png') }}"/></a></div>
                 <div id="head-mobile"></div>
                 <div class="button"></div>
                 <ul>
                     <li><a href='#'>About</a></li>
-                    <li><a href='#'>BlaBla</a></li>
                     <li><a href='#'>Filtre</a>
                         <ul>
                             <li><a href='#'>Categorie</a>
@@ -45,7 +44,8 @@
                         </ul>
                     </li>
                     <li><a href='#'>Contact</a></li>
-                    {% if app.user %}
+                    {% if user is defined %}
+                        <li><a href='{{ path('new_post') }}'>Adauga</a></li>
                         <li class="username"><a href='#'>{{ user.username }}</a>
                             <ul>
                                 <li><a href='{{ path('logout') }}'>Logout</a></li>
@@ -62,6 +62,8 @@
         <div id="">
             {% block body %}{% endblock %}
         </div>
+
+        <div class="scroll-top-link">^</div>
 
         {% block javascripts %}{% endblock %}
     </body>

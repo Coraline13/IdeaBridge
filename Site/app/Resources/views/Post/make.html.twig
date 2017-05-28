@@ -3,16 +3,47 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/form.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
 {% endblock %}
 
 {% block body %}
     {% form_theme form 'forms/fields.html.twig' %}
     <div class="container">
-        {{ form_start(form, { 'attr': {'id': 'contact'} }) }}
-        {{ form_row(form.nume, {'label': 'Nume'})  }}
-        {{ form_row(form.categorie, { 'label': 'Categorie' }) }}
-        {{ form_row(form.descriere) }}
-        <button type="submit">Posteaza!</button>
-        {{ form_end(form) }}
+        <div class="row">
+            <div class="col-md-12">
+                {{ form_start(form, { 'attr': {'id': 'contact'} }) }}
+                {{ form_row(form.nume, {'label': 'Nume'})  }}
+                {{ form_row(form.categorie, { 'label': 'Categorie' }) }}
+                {{ form_row(form.descriere) }}
+                <button type="submit">Posteaza!</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="map"></div>
+            </div>
+        </div>
     </div>
+    <script>
+        function initMap(a,b) {
+            var uluru = {lat: a, lng: b};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+        function start()
+        {
+            initMap(46.3282761,21.68690443);
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG7KM5UGB_BQTGDFOR7LgG40e5fKM2ItM&callback=start">
+    </script>
 {% endblock %}

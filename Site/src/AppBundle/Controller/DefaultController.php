@@ -30,8 +30,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Template()
-     * @Route("/upload", name="upload")
+     * @Route ("/upload")
      */
     public function uploadAction(Request $request)
     {
@@ -42,19 +41,20 @@ class DefaultController extends Controller
             ->getForm()
         ;
 
-        if ($this->getRequest()->isMethod('POST')) {
-            $form->bind($this->getRequest());
-            if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getEntityManager();
 
                 $em->persist($document);
                 $em->flush();
 
-                return $this->redirectToRoute('homepage');
-            }
+            return $this->redirectToRoute('homepage');
         }
 
-        return array('form' => $form->createView());
+        return $this->render(
+            'Post/upload.html.twig',
+            array('form' => $form->createView())
+        );
     }
 
     private function returnData($postId){

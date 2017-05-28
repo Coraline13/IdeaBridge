@@ -2,7 +2,7 @@
     {% if loop.index0 % 3 == 0 %}
         <div class="section group">
     {% endif %}
-    <div class="col box1 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});">
+    <div class="col box1 span_1_of_3" style="background: linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)),url({{ asset('images/groapa.jpg') }});" onclick="location.href =' {{ path('detail_post', {'postId': post.id }) }}'" >
         <h2>{{ post.nume }}</h2><span class="status">{{ post.status }}</span>
         <p> {{ post.descriere }}</p>
 

@@ -37,22 +37,34 @@ class PostController extends Controller
     }
 
     /**
-     * @Route("/post_data/{postId}")
+     * @Route("/post_data/{postId}", name="detail_post")
      */
     public function returnDataAction($postId){
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Post');
 
-        $post = $this->getDoctrine()
-            ->getRepository('AppBundle:Post')
-            ->find($postId);
+        $post = $repository->find($postId);
 
-        if (!$post) {
-            throw $this->createNotFoundException(
-                'No product found for id '.$postId
-            );
+        if(!isset($post))
+        {
+            return $this->render('base.html.twig');
         }
 
-        return $this->render('Post/base.html.twig', array(
-            'post' => $post,
+        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
+
+        $user = $repository->find($post->getPropunator());
+
+        if(!isset($user))
+        {
+            return $this->render('base.html.twig');
+        }
+
+
+        return $this->render('Post/detail.html.twig', array(
+            'categorie' => $post->getCategorie(),
+            'username' =>  $user->getNume().' '.$user->getPrenume(),
+            'descriere' => $post->getDescriere(),
+            'scor' => $post->getScor(),
+            'status' => $post->getStatus(),
         ));
     }
 
@@ -70,12 +82,14 @@ class PostController extends Controller
     }
 
     /**
-     * @Route("/make_post")
+     * @Route("/make_post", name="new_post")
      */
     public function makeAction(Request $request)
     {
         // 1) build the form
         $post = new Post();
+
+
 
         $form = $this->createFormBuilder($post)
             ->add('nume', TextType::class)
@@ -87,6 +101,12 @@ class PostController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             // 4) save the User!
+
+            $user = $this->getUser();
+            $userId = $user->getId();
+
+            $post->setPropunator($userId);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
             $em->flush();

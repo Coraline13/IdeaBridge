@@ -1,0 +1,73 @@
+{# app/Resources/views/Post/make.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/post.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/viewer.min.css') }}" />
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <br />
+        <div class="marius">
+            <b><p>Status:</b>{{ status }}</p>
+        </div>
+        <div class="col-sm-8 col-md-6">
+            <div>
+                    <b><p>Categorie:</b>{{ categorie }}</p>
+                    <b><p>Propunator:</b>{{ username }}</p>
+                    <b><p>Descriere:</b><br />{{ descriere }}</p>
+                    <b><p>Poze:</b><br /></p>
+                <div class="docs-galley">
+                    <ul class="docs-pictures clearfix">
+                        <li><img src="{{ asset('images/tibet-1.jpg') }}" alt="Cuo Na Lake"></li>
+                        <li><img src="{{ asset('images/tibet-2.jpg') }}" alt="Tibetan Plateau"></li>
+                    </ul>
+                </div>
+                    <b><p>Urmaritori:</b><br /></p>
+                    <b><p>Raspunsul Primariei:</b><br /></p>
+                    <b><p>Score:</b><br />{{ scor }}</p>
+            </div>
+
+        </div>
+        <div class="col-sm-8 col-md-6">
+            <div>
+                    <b><p>Locatie:</b></p>
+                <div id="map"></div>
+                <script>
+                    function initMap(a,b) {
+                        var uluru = {lat: a, lng: b};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 15,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                    function start()
+                    {
+                        initMap(46.3282761,21.68690443);
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG7KM5UGB_BQTGDFOR7LgG40e5fKM2ItM&callback=start">
+                </script>
+                    <b><p>Data si ora:</b></p>
+                    <b><p>Duratie:</b></p>
+                    <b><p>Voluntari implicati:</b></p>
+                    <b><p>Ecofriendly:</b></p>
+            </div>
+
+        </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+        <script src="{{ asset('js/post.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/viewer.min.js') }}"></script>
+{% endblock %}

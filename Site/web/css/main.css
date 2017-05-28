@@ -6,6 +6,11 @@ body {
     background: #eee;
 }
 
+#map{
+    min-width: 500px;
+    min-height: 500px;
+}
+
 /* Ideas */
 .idea{
     border: solid 1px #ccc;
